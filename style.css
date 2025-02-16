@@ -79,7 +79,6 @@ section{
 
 .home-img img {
     width: 25vw;
-    height: 30vw;
     border-radius: 90%;
     animation: floatImage 4s ease-in-out infinite;
 }
@@ -169,7 +168,6 @@ span {
 
 .about-img img {
     width: 25vw;
-    height: 30vw;
     border-radius: 90%;
 }
 
@@ -496,6 +494,7 @@ span {
 @media (max-width:365px) {
     .home-img img {
         width: 90vw;
+        height: 40vw;
     }
 
     .about-img img {
