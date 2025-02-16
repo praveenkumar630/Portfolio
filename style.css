@@ -37,7 +37,7 @@ section{
     left: 0;
     width: 100%;
     padding: 2rem 9%;
-    background: var(--bg-color);
+    background: #1f051e;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -78,7 +78,9 @@ section{
 }
 
 .home-img img {
-    width: 35vw;
+    width: 25vw;
+    height: 30vw;
+    border-radius: 90%;
     animation: floatImage 4s ease-in-out infinite;
 }
 
@@ -166,7 +168,9 @@ span {
 }
 
 .about-img img {
-    width: 35vw;
+    width: 25vw;
+    height: 30vw;
+    border-radius: 90%;
 }
 
 .heading {
@@ -353,7 +357,7 @@ span {
     align-items: center;
     flex-wrap: wrap;
     padding: 2rem 9%;
-    background:var(--second-bg-color) ;
+    background:#1f051e ;
 }
 
 .footer-text p {

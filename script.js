@@ -8,6 +8,37 @@ menuIcon.onclick = () => {
 };
 
 
+/*==============download CV===============*/
+
+document.getElementById('download-cv').addEventListener('click', function () {
+    const link = document.createElement('a');
+    link.href = 'https://drive.google.com/file/d/15CMCtm7onqGv0Dn9HOtwF7ddZDYKLHbK/view?usp=sharing'; // Replace with actual file path
+    link.download = 'Praveen_Kumar_CV.pdf'; // File name to save as
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+});
+
+/*==============email section===============*/
+document.addEventListener("DOMContentLoaded", function () {
+    emailjs.init("RXL8NXoLlJHf_C7Zm"); // Replace with your EmailJS Public Key
+
+    document.getElementById("contact-form").addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent page reload
+
+        emailjs.sendForm("service_ww249vj", "template_hmpsrtv", this)
+            .then(function () {
+                alert("Message Sent Successfully!");
+                document.getElementById("contact-form").reset(); // Clear the form
+            }, function (error) {
+                alert("Failed to Send Message. Please Try Again.");
+                console.error("Error:", error);
+            });
+    });
+});
+
+
+
 /*==============scroll section active link===============*/
 let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('header nav a');
@@ -50,7 +81,7 @@ ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'left' });
 ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
 
 /*=============== typed js ==============*/
-const typed = new Typed('.multiple-text',{
+const typed = new typed('.multiple-text',{
     strings: ['Frontend Developer','Problem Solver','Data Scientist'],
     typeSpeed:100,
     backSpeed:100,
